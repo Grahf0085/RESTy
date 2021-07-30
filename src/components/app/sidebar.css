@@ -1,0 +1,9 @@
+section {
+  width: 17.5vw;
+  margin: 2px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+}

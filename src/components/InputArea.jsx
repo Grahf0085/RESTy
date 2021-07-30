@@ -1,7 +1,10 @@
 import React from 'react';
 import './inputArea.css';
+import PropTypes from 'prop-types';
 
-const InputArea = ({ url, method, onUrlChange, onSubmit, onMethodChange }) => {
+
+const InputArea = ({ url, method, putBody, onUrlChange, 
+  onSubmit, onMethodChange, onPutChange }) => {
   return <form className="actualForm" onSubmit={onSubmit}>
     <input placeholder="URL" className="searchBar" value={url} 
       onChange={onUrlChange}></input>
@@ -23,8 +26,19 @@ const InputArea = ({ url, method, onUrlChange, onSubmit, onMethodChange }) => {
       <label htmlFor="delete">DELETE</label>
       <button>Go!</button>
     </section>
-    <textarea placeholder="Raw JSON Body" name="body"></textarea>
+    <textarea placeholder="Raw JSON Body" name="body" 
+      value={putBody} onChange={onPutChange}></textarea>
   </form>;
+};
+
+InputArea.propTypes = {
+  url: PropTypes.string,
+  method: PropTypes.string,
+  putBody: PropTypes.string,
+  onUrlChange: PropTypes.func,
+  onSubmit: PropTypes.func,
+  onMethodChange: PropTypes.func,
+  onPutChange: PropTypes.func
 };
 
 export default InputArea;

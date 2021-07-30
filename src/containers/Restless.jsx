@@ -10,15 +10,15 @@ export default class Restless extends Component {
   state = {
     loading: true,
     url: '',
-    body: [],
-    method: ''
+    body: 'Hello. I am bored. PLEASE make a fetch!',
+    method: '',
+    putBody: ''
   };
 
   handleSubmit = async (e) => {
     e.preventDefault();
-    const { url, method } = this.state;
-    console.log(method);
-    const apiResponse = await apiUrl(url, method);
+    const { url, method, putBody } = this.state;
+    const apiResponse = await apiUrl(url, method, putBody);
     this.setState({ body: apiResponse, method, loading: false });
   }
 
@@ -30,12 +30,16 @@ export default class Restless extends Component {
     this.setState({ method: target.value });
   };
 
+  handlePutChange = ({ target }) => {
+    this.setState({ putBody: target.value });
+  };
+
   async componentDidMount() {
     this.setState({ loading: false });
   }
 
   render() {
-    const { url, method, body, loading } = this.state;
+    const { url, method, body, putBody, loading } = this.state;
 
     if(loading) return <h1>Loading...</h1>;
 
@@ -43,9 +47,10 @@ export default class Restless extends Component {
       <section className="container">
         <section className="header"><Header /></section>
         <section className="sidebar"><Sidebar /></section>
-        <section className="form"><InputArea url={url} method={method}
-          onUrlChange={this.handleUrlChange} 
-          onMethodChange={this.handleMethodChange}
+        <section className="form"><InputArea url={url} method={method} 
+          putBody={putBody} onUrlChange={this.handleUrlChange} 
+          onMethodChange={this.handleMethodChange} 
+          onPutChange={this.handlePutChange}
           onSubmit={this.handleSubmit}/></section>
         <section className="pre"><PreArea body={body}/></section>
       </section>

@@ -1,12 +1,11 @@
-import React from 'react'
+import React from 'react';
 import './sidebar.css';
 
 const Sidebar = () => {
   return (
-    <section>
-      
-    </section>
-
+    <ul id="side">
+      <h2>idhfoidfdsa;f</h2>
+    </ul>
   );
 };
 

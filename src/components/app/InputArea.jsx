@@ -2,19 +2,18 @@ import React from 'react';
 import './inputArea.css';
 
 const InputArea = () => {
-  return <form>
-    <input placeholder="URL"></input>
-    <br></br>
-    <section>
+  return <form className="actualForm">
+    <input placeholder="URL" className="searchBar"></input>
+    <section className="options">
       <input id="get" type="radio" name="method" value="GET"></input> 
       <label htmlFor="get">GET</label>
-      <input id="get" type="radio" name="method" value="POST"></input> 
+      <input id="post" type="radio" name="method" value="POST"></input> 
       <label htmlFor="post">POST</label>
-      <input id="get" type="radio" name="method" value="PUT"></input> 
+      <input id="put" type="radio" name="method" value="PUT"></input> 
       <label htmlFor="put">PUT</label>
-      <input id="get" type="radio" name="method" value="PATCH"></input> 
+      <input id="patch" type="radio" name="method" value="PATCH"></input> 
       <label htmlFor="patch">PATCH</label>
-      <input id="get" type="radio" name="method" value="DELETE"></input> 
+      <input id="delete" type="radio" name="method" value="DELETE"></input> 
       <label htmlFor="delete">DELETE</label>
       <button>Go!</button>
     </section>

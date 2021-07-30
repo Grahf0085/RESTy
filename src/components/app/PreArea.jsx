@@ -2,7 +2,8 @@ import React from 'react';
 import './preArea.css';
 
 const preArea = () => {
-  return <pre>Hello: I am bored. PLEASE make a fetch!</pre>;
+  return <pre><p>"root" {'{'}  1 item "Hello":"I am bored. PLEASE make a 
+    fetch!f</p></pre>;
 
 };
 

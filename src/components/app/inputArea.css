@@ -36,7 +36,7 @@ button {
   grid-area: options;
   display: grid;
   grid-template-columns: 65px 75px 64px 83px 125px 50px;
-  grid-template-rows: .5fr;
+  grid-template-rows: 1fr;
   grid-template-areas: " G PO PU PA D B";
   align-items: center;
 }

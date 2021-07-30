@@ -16,13 +16,18 @@ export default class Restless extends Component {
 
   handleSubmit = async (e) => {
     e.preventDefault();
-    const { url } = this.state;
+    const { url, method } = this.state;
+    console.log(method);
     const apiResponse = await apiUrl(url);
-    this.setState({ body: apiResponse, loading: false });
+    this.setState({ body: apiResponse, method, loading: false });
   }
 
-  handleChange = ({ target }) => {
+  handleUrlChange = ({ target }) => {
     this.setState({ url: target.value });
+  };
+
+  handleMethodChange = ({ target }) => {
+    this.setState({ method: target.value });
   };
 
   async componentDidMount() {
@@ -38,8 +43,9 @@ export default class Restless extends Component {
       <section className="container">
         <section className="header"><Header /></section>
         <section className="sidebar"><Sidebar /></section>
-        <section className="form"><InputArea url={url}
-          onChange={this.handleChange} 
+        <section className="form"><InputArea url={url} method={method}
+          onUrlChange={this.handleUrlChange} 
+          onMethodChange={this.handleMethodChange}
           onSubmit={this.handleSubmit}/></section>
         <section className="pre"><PreArea body={body}/></section>
       </section>

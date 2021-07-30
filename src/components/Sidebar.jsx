@@ -4,7 +4,7 @@ import './sidebar.css';
 const Sidebar = () => {
   return (
     <ul id="side">
-      <h2>idhfoidfdsa;f</h2>
+      <h2>Sidebar Stuff</h2>
     </ul>
   );
 };

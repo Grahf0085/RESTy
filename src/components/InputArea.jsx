@@ -1,25 +1,25 @@
 import React from 'react';
 import './inputArea.css';
 
-const InputArea = ({ url, onChange, onSubmit }) => {
+const InputArea = ({ url, method, onUrlChange, onSubmit, onMethodChange }) => {
   return <form className="actualForm" onSubmit={onSubmit}>
     <input placeholder="URL" className="searchBar" value={url} 
-      onChange={onChange}></input>
+      onChange={onUrlChange}></input>
     <section className="options">
       <input id="get" type="radio" name="method" value="GET" 
-      ></input> 
+        method={method} onChange={onMethodChange}></input> 
       <label htmlFor="get">GET</label>
       <input id="post" type="radio" name="method" value="POST"
-      ></input> 
+        method={method} onChange={onMethodChange}></input> 
       <label htmlFor="post">POST</label>
       <input id="put" type="radio" name="method" value="PUT"
-      ></input> 
+        method={method} onChange={onMethodChange}></input> 
       <label htmlFor="put">PUT</label>
       <input id="patch" type="radio" name="method" value="PATCH"
-      ></input> 
+        method={method} onChange={onMethodChange}></input> 
       <label htmlFor="patch">PATCH</label>
       <input id="delete" type="radio" name="method" value="DELETE"
-      ></input> 
+        method={method} onChange={onMethodChange}></input> 
       <label htmlFor="delete">DELETE</label>
       <button>Go!</button>
     </section>

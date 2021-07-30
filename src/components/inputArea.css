@@ -1,5 +1,6 @@
 input[type="radio"] {
   /* opacity: 0; */
+  display: none;
   position: absolute;
 }
 

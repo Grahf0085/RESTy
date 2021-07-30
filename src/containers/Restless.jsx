@@ -18,7 +18,7 @@ export default class Restless extends Component {
     e.preventDefault();
     const { url, method } = this.state;
     console.log(method);
-    const apiResponse = await apiUrl(url);
+    const apiResponse = await apiUrl(url, method);
     this.setState({ body: apiResponse, method, loading: false });
   }
 

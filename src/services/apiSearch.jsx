@@ -1,6 +1,8 @@
-export const apiUrl = async (url) => {
+export const apiUrl = async (url, formMethod) => {
 
-  const res = await fetch(url);
+  const res = await fetch(url, {
+    method: formMethod
+  });
   
   const json = await res.json();
 

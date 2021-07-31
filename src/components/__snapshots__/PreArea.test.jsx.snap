@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PreArea component renders pre area 1`] = `
+<DocumentFragment>
+  <pre>
+    "name: none"
+  </pre>
+</DocumentFragment>
+`;

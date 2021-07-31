@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sidebar component renders ul 1`] = `
+<DocumentFragment>
+  <ul
+    data-testid="side"
+  />
+</DocumentFragment>
+`;

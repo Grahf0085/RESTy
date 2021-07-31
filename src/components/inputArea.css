@@ -1,0 +1,77 @@
+input[type="radio"] {
+  /* opacity: 0; */
+  display: none;
+  position: absolute;
+}
+
+label {
+  background-color: #eeeeee;
+  padding: 4px 16px;
+  font-size: 16px;
+  width: 15px;
+  height: 15px;
+}
+
+input[type="radio"]:checked + label {
+  background-color: #204060;
+}
+
+textarea {
+  width: 50%;
+  height: 6vw;
+  grid-area: body;
+}
+
+.searchBar {
+  width: 99%;
+  height: 25px;
+  font-size: 12px;
+  grid-area: url;
+}
+
+button {
+  grid-area: B;
+}
+
+.options {
+  grid-area: options;
+  display: grid;
+  grid-template-columns: 65px 75px 64px 83px 125px 50px;
+  grid-template-rows: 1fr;
+  grid-template-areas: " G PO PU PA D B";
+  align-items: center;
+}
+
+.actualForm {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: .1fr 1fr auto;
+  grid-template-areas: "url"
+                        "options"
+                        "body";
+}
+
+#get + label {
+  grid-area: G;
+  width: 65px;
+}
+
+#post + label {
+  grid-area: PO;
+  width: 75px;
+}
+
+#put + label {
+  grid-area: PU;
+  width: 64px;
+}
+
+#patch + label {
+  grid-area: PA;
+  width: 83px;
+}
+
+#delete + label {
+  grid-area: D;
+  width: 75px;
+}

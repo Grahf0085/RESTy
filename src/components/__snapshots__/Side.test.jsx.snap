@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Side component renders url and method 1`] = `
+<DocumentFragment>
+  <section>
+    <h3>
+      GET
+    </h3>
+    <p>
+      aintitcool.com
+    </p>
+  </section>
+</DocumentFragment>
+`;

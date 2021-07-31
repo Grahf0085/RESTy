@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputArea component renders inputArea 1`] = `
+<DocumentFragment>
+  <form
+    class="actualForm"
+  >
+    <input
+      class="searchBar"
+      placeholder="URL"
+      value="aintitcool.com"
+    />
+    <section
+      class="options"
+    >
+      <input
+        id="get"
+        method="put"
+        name="method"
+        type="radio"
+        value="GET"
+      />
+      <label
+        for="get"
+      >
+        GET
+      </label>
+      <input
+        id="post"
+        method="put"
+        name="method"
+        type="radio"
+        value="POST"
+      />
+      <label
+        for="post"
+      >
+        POST
+      </label>
+      <input
+        id="put"
+        method="put"
+        name="method"
+        type="radio"
+        value="PUT"
+      />
+      <label
+        for="put"
+      >
+        PUT
+      </label>
+      <input
+        id="patch"
+        method="put"
+        name="method"
+        type="radio"
+        value="PATCH"
+      />
+      <label
+        for="patch"
+      >
+        PATCH
+      </label>
+      <input
+        id="delete"
+        method="put"
+        name="method"
+        type="radio"
+        value="DELETE"
+      />
+      <label
+        for="delete"
+      >
+        DELETE
+      </label>
+      <button>
+        Go!
+      </button>
+    </section>
+    <textarea
+      name="body"
+      placeholder="Raw JSON Body"
+    >
+      name: dexter
+    </textarea>
+  </form>
+</DocumentFragment>
+`;

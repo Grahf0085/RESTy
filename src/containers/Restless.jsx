@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import InputArea from '../components/InputArea';
 import PreArea from '../components/PreArea';
 import Sidebar from '../components/Sidebar';
+import { setMethod, setUrl } from '../services/utils.js';
 
 export default class Restless extends Component {
 
@@ -16,8 +17,10 @@ export default class Restless extends Component {
   };
 
   handleSubmit = async (e) => {
-    e.preventDefault();
     const { url, method, putBody } = this.state;
+    e.preventDefault();
+    setMethod(method);
+    setUrl(url);
     const apiResponse = await apiUrl(url, method, putBody);
     this.setState({ body: apiResponse, method, loading: false });
   }
